@@ -47,7 +47,8 @@ Sinta-se à vontade para criar issues ou pull requests com melhorias.
 ## Grafo de Fluxo
 Segue o grafo de fluxo baseado no código:
 
-![Grafo de Fluxo](grafo_de_fluxo.png)
+![fluoxograma](https://github.com/user-attachments/assets/bb44fde1-594d-45f5-9efb-f3ac50e146e2)
+
 
 ## Complexidade Ciclomática
 A complexidade ciclomática do código é **3**.
