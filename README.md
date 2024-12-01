@@ -44,6 +44,39 @@ Este repositório contém um código exemplo para realizar um teste de caixa bra
 Sinta-se à vontade para criar issues ou pull requests com melhorias.
 # Etapa 3 - Grafo de Fluxo e Análise do Código
 
+# Etapa 3 - Grafo de Fluxo e Análise do Código
+
+## Complexidade Ciclomática
+A complexidade ciclomática do código é calculada com a fórmula:
+
+\[
+M = E - N + 2P
+\]
+
+- **N (Nodos):** 8
+- **E (Arestas):** 9
+- **P (Componentes Conectados):** 1
+
+Substituindo na fórmula:
+
+\[
+M = 9 - 8 + 2 = 3
+\]
+
+A complexidade ciclomática do código é **3**.
+
+---
+
+## Caminhos Independentes
+Os caminhos independentes do código são:
+
+1. **Caminho 1:** `(2) → (4) → (6) → (7) → (8)`
+2. **Caminho 2:** `(11) → (19) → (20) → (23)`
+3. **Caminho 3:** `(11) → (19) → (23)` (condicional falsa no `if`).
+
+---
+
+
 ## Grafo de Fluxo
 Segue o grafo de fluxo baseado no código:
 
