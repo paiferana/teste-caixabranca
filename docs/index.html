@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Class Documentation</title>
+</head>
+<body>
+    <h1>Class User</h1>
+    <p>Package: <strong>login</strong></p>
+
+    <h2>Overview</h2>
+    <p>This class is responsible for handling database connections and user authentication.</p>
+
+    <h2>Methods</h2>
+    <ul>
+        <li>
+            <h3><code>Connection conectarBD()</code></h3>
+            <p>Establishes a connection to the MySQL database.</p>
+            <p><strong>Returns:</strong> <code>Connection</code> - A database connection object.</p>
+        </li>
+        <li>
+            <h3><code>boolean verificarUsuario(String login, String senha)</code></h3>
+            <p>Validates user credentials (login and password).</p>
+            <p><strong>Parameters:</strong></p>
+            <ul>
+                <li><code>login</code>: User's login name.</li>
+                <li><code>senha</code>: User's password.</li>
+            </ul>
+            <p><strong>Returns:</strong> <code>boolean</code> - True if the credentials are valid, false otherwise.</p>
+        </li>
+    </ul>
+
+    <h2>Fields</h2>
+    <ul>
+        <li><code>String nome</code> - Stores the name of the user.</li>
+        <li><code>boolean result</code> - Indicates whether the login was successful.</li>
+    </ul>
+</body>
+</html>
