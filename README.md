@@ -1,45 +1,32 @@
-# teste-caixabranca
- # Análise de Código: Teste de Caixa Branca (Estático)
+# Projeto de Testes e Análise de Código em Java
 
-## Descrição do Projeto
-Este repositório contém um código exemplo para realizar um teste de caixa branca estático, apontando erros e vulnerabilidades no código original.
+Este repositório contém o código fonte e os documentos relacionados ao **teste estático de código**, **análise de complexidade ciclomática**, e **documentação JavaDoc** de um projeto de autenticação de usuários em Java. Durante o desenvolvimento deste projeto, foram aplicados testes de caixa branca, análise de erros no código e a geração de documentação detalhada.
 
-## Erros Encontrados
-1. **SQL Injection**
-   - O uso de concatenação de strings para construir a query SQL (`+`) torna o código vulnerável a ataques.
-   - **Correção:** Usar `PreparedStatement` para evitar injeções.
+## Estrutura do Repositório
 
-2. **Credenciais no Código**
-   - Usuário e senha do banco de dados estão embutidos no código.
-   - **Correção:** Usar variáveis de ambiente ou arquivos de configuração seguros.
+- **src/**: Contém o código fonte da aplicação.
+  - **login/User.java**: Implementação da classe `User`, responsável pela conexão com o banco de dados e realização da autenticação do usuário.
+- **docs/**: Contém a documentação gerada (JavaDoc).
+  - **index.html**: Documentação manual da classe `User` gerada com o padrão JavaDoc.
+- **PLANO DE TESTE.xls**: Formulário utilizado para o preenchimento de testes estáticos, documentando os erros encontrados e as ações para corrigi-los.
+- **README.md**: Este arquivo, que documenta o projeto e suas etapas de desenvolvimento.
 
-3. **Classe do Driver**
-   - Classe do driver foi declarada incorretamente:
-     ```java
-     Class.forName("com.mysql.Driver.Manager").newInstance();
-     ```
-   - **Correção:** Usar o driver correto:
-     ```java
-     Class.forName("com.mysql.cj.jdbc.Driver");
-     ```
+## O que foi realizado
 
-4. **Gerenciamento de Recursos**
-   - Conexões, Statements e ResultSets não são fechados.
-   - **Correção:** Usar `try-with-resources`.
+### **1. Teste de Caixa Branca**
+Foi realizada uma análise estática do código para identificar possíveis erros, como problemas de segurança e ineficiência. Foi preenchido um **formulário de Teste Estático** para registrar os erros encontrados e ações corretivas.
 
-5. **Exceções Ignoradas**
-   - Exceções capturadas no código são ignoradas, dificultando o diagnóstico de erros.
-   - **Correção:** Registrar as exceções para análise.
+### **2. Análise de Complexidade Ciclomática**
+A complexidade ciclomática do código foi calculada para determinar a complexidade dos fluxos lógicos. A quantidade de caminhos possíveis foi identificada e documentada, e cada uma das sequências foi detalhada.
 
-6. **Variáveis Públicas**
-   - Variáveis `nome` e `result` são públicas.
-   - **Correção:** Torná-las privadas e usar métodos getter e setter.
+### **3. Geração de JavaDoc**
+A documentação do código foi gerada utilizando o padrão **JavaDoc**, fornecendo informações detalhadas sobre a classe `User`, seus métodos e variáveis. A documentação gerada foi adicionada manualmente e pode ser visualizada no arquivo `docs/index.html`.
 
-## Como Rodar o Código
-1. Configure o banco de dados MySQL e crie a tabela `usuarios`.
-2. Ajuste as credenciais no código para acessar o banco.
-3. Compile e execute o programa.
+### **4. Testes Estáticos**
+Um formulário de **Testes Estáticos** foi preenchido para identificar áreas do código que poderiam ser otimizadas. A análise de erros e os resultados dos testes estão documentados no arquivo **PLANO DE TESTE.xls**.
 
-## Como Contribuir
-Sinta-se à vontade para criar issues ou pull requests com melhorias.
+## Como Executar o Projeto
 
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/paiferana/teste-caixabranca.git
